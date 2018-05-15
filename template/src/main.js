@@ -4,10 +4,15 @@
 {{/if_eq}}
 import Vue from 'vue'
 import App from './App'
+import './scss/main.scss'
+import Header from '@/components/template/Header'
+import Footer from '@/components/template/Footer'
 {{#router}}
 import router from './router'
 {{/router}}
 
+Vue.component('app-header', Header)
+Vue.component('app-footer', Footer)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

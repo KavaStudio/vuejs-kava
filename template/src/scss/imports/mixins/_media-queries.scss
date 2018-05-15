@@ -1,0 +1,34 @@
+$mobile: 640px;
+$desktop: 1024px;
+$large-desktop: 1440px;
+$hd-desktop: 1920px;
+
+@mixin mobile-max {
+  @media ($mobile-max-width: #{$mobile}-1) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$large-desktop}) {
+    @content;
+  }
+}
+
+@mixin hd-desktop {
+  @media (min-width: #{$hd-desktop}) {
+    @content;
+  }
+}
